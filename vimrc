@@ -6,8 +6,14 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'scrooloose/nerdtree'
 Plug 'valloric/youcompleteme'
 Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'jreybert/vimagit'
 call plug#end()
 
+
+
+let g:airline#extensions#tabline#enabled = 1
 
 syntax enable      " enable syntax processing
 set tabstop=4      " number of visual spaces per TAB
