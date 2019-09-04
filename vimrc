@@ -5,12 +5,9 @@ Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'scrooloose/nerdtree'
 Plug 'valloric/youcompleteme'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
-
-
-"Colors
-colorscheme  goodwolf "colorscheme in ~/.vim/colors/
 
 syntax enable      " enable syntax processing
 set tabstop=4      " number of visual spaces per TAB
@@ -52,6 +49,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 
+nmap ff :tabfind
 nmap G Gzz
 nmap n nzz
 nmap N Nzz
