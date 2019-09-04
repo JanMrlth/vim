@@ -2,48 +2,39 @@
 
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-easy-align'
-Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-Plug 'fatih/vim-go', { 'tag': '*' }
-Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'scrooloose/nerdtree'
-Plug 'sirver/ultisnips'
-Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'valloric/youcompleteme'
 call plug#end()
 
 
 
 "Colors
-colorscheme badwolf "colorscheme in ~/.vim/colors/
+colorscheme  goodwolf "colorscheme in ~/.vim/colors/
 
-syntax enable 		"enable syntax processing
-set tabstop=4 		"number of visual spaces per TAB
-set softtabstop=4 	"number of spaces in tab when editing
-set expandtab		"turns tabs into spaces
+syntax enable      " enable syntax processing
+set tabstop=4      " number of visual spaces per TAB
+set softtabstop=4  " number of spaces in tab when editing
+set expandtab      " turns tabs into spaces
 
-"UI
-set number		"show line numbers
-set showcmd		"show command in bottom bar
-set cursorline		"highlight current line
-filetype indent on	"load filetype-specific indent files
-set wildmenu		"visual autocomplete for command menu
-set showmatch		" highlight matching {()}
+" UI
+set number         " show line numbers
+set showcmd        " show command in bottom bar
+set cursorline     " highlight current line
+filetype indent on " load filetype-specific indent files
+set wildmenu       " visual autocomplete for command menu
+set showmatch      " highlight matching {()}
 set laststatus=2
 
-"Search
-set incsearch		"search as characters are entered
-set hlsearch		"highlight search
+" Search
+set incsearch      " search as characters are entered
+set hlsearch       " highlight search
 set path+=**
 
 "Bindings
 no <up> ddkP 
-no <left> <Nop>
-no <right> <Nop>
+no <left>  :tabprevious<CR>
+no <right> :tabnext<CR>
 no <down> ddp 
 
 
@@ -76,4 +67,8 @@ imap <leader>[ []<ESC>i
 imap <leader>{ {<CR><CR>}<ESC>ki<TAB>
 
 imap jj <ESC>
+
+"vim easy align 
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
