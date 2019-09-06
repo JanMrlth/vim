@@ -6,30 +6,37 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'scrooloose/nerdtree'
 Plug 'valloric/youcompleteme'
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-obsession'
+Plug 'scrooloose/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-endwise'
+Plug 'vim-ruby/vim-ruby'
 call plug#end()
+
 
 " Colors and Style
 set t_Co=256
 let g:airline#extensions#tabline#enabled = 1
 colorscheme badwolf
 
+" UI
+filetype plugin indent on " load filetype-specific indent files
+set number relativenumber        " show line numbers
+set showcmd        " show command in bottom bar
+set cursorline     " highlight current line
+set wildmenu       " visual autocomplete for command menu
+set showmatch      " highlight matching {()}
+set laststatus=2
 
 syntax enable      " enable syntax processing
 set tabstop=4      " number of visual spaces per TAB
 set softtabstop=4  " number of spaces in tab when editing
+set shiftwidth=4   " On pressing tab, insert 4 spaces
 set expandtab      " turns tabs into spaces
 
-" UI
-set number         " show line numbers
-set showcmd        " show command in bottom bar
-set cursorline     " highlight current line
-filetype indent on " load filetype-specific indent files
-set wildmenu       " visual autocomplete for command menu
-set showmatch      " highlight matching {()}
-set laststatus=2
 
 " Search
 set incsearch      " search as characters are entered
