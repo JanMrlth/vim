@@ -9,13 +9,18 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
 Plug 'scrooloose/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mattn/emmet-vim'
-Plug 'vim-ruby/vim-ruby'
+Plug 'Yggdroot/indentLine' "Shows a line between indented text parts
 call plug#end()
 
+let ruby_whitespace_error = 1
+let ruby_line_continuation_error = 1
+let ruby_global_variable_error   = 1
 " Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -43,7 +48,7 @@ set laststatus=2
 
 syntax enable      " enable syntax processing
 set tabstop=4      " number of visual spaces per TAB
-set softtabstop=4  " number of spaces in tab when editing
+"set softtabstop=4  " number of spaces in tab when editing
 set shiftwidth=4   " On pressing tab, insert 4 spaces
 set expandtab      " turns tabs into spaces
 
@@ -55,8 +60,8 @@ set path+=**
 
 "Bindings
 no <up> ddkP 
-no <left>  :tabprevious<CR>
-no <right> :tabnext<CR>
+no <left> :bp<CR>
+no <right> :bn<CR>
 no <down> ddp 
 
 
@@ -74,7 +79,6 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 
-nmap ff :tabfind
 nmap G Gzz
 nmap n nzz
 nmap N Nzz
